@@ -8,11 +8,10 @@ const printBearForm = () => {
         <div class="form-group">
           <label for="bear-input">Enter Bear Name</label>
           <input type="bear" class="form-control" id="bearInfo" aria-describedby="emailHelp">
-          <small id="emailHelp" form-text text-muted">Enter the bear name.</small>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlFile1">Choose Bear Photo</label>
-            <input type="file" class="form-control-file" id="bear-img">
+            <label for="exampleInputPassword1">Enter Bear Image URL</label>
+            <input type="text" class="form-control" id="bear-img">
           </div>
         <button type="submit" class="btn btn-primary" id="submit-bear">Submit</button>
       </form>`);
@@ -25,13 +24,11 @@ const pushBearInfo = () => {
 
         let bearForm = {};
         bearForm.bearName = $("#bearInfo").val();
-        console.log("bearInfo.bearName", bearForm.bearName)
-        bearForm.bearImg = $("#submit-bear").val();
+        bearForm.bearImg = $("#bear-img").val();
 
         bearCard.push(bearForm);
         return userBear(bearCard);
     }); 
 };
-
 
 export { printBearForm, pushBearInfo };
