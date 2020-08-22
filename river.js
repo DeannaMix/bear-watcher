@@ -1,23 +1,15 @@
-
-const printToDom = (divId, textToPrint) => {
-    const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML = textToPrint;
-  };
-
-const buildABear = () => {
-    let domString = `<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>`
-
-  printToDom( , domString)
+const userBear = (array) => {
+  $("#bear-card-container").html("");
+  array.forEach((bear) => {
+    $("#bear-card-container").append(`
+    <div class="card" style="width: 18rem;">
+  <img src="${bear.bearImg}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h2> "${bear.bearName}"</h2>
+  </div>
+</div>`)
+  });
 }
 
-init = () => {
-buildABear()
 
-}
-
-init()
+export { userBear };
