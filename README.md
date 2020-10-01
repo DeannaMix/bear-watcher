@@ -1,2 +1,3 @@
 # bear-watcher
-Figma Link: https://www.figma.com/file/QTKZ7aCSiotgUavNdsub92/Bear-Watcher?node-id=0%3A1
+A site where you can add your bear and track them via the page. Technologies used are Flexbox, CSS, Bootstrap, html, and JS.
+https://brave-pare-443295.netlify.app/
